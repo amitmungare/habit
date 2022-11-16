@@ -48,7 +48,7 @@ app.use(passport.setAuthenticatedUser);
 app.use(flash());
 app.use(customMiddleware.setFlash);
 
-app.use('/v1/api',require('./routes/index'));
+app.use('/',require('./routes/index'));
 
 app.listen(port, function(error){
     if(error){
