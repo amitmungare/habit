@@ -1,0 +1,57 @@
+
+
+<div>
+    <h2 class="name">Habit</h2>
+
+    <div>
+        <h5>Add a new habit</h5>
+        <form action="/habit/create" method="post">
+            <input type="text" name="habitName" placeholder="habit name">
+            <input type="text" name="habitDis" placeholder="habit discription">
+            <button type="submit">Add</button>
+        </form>
+    </div>
+
+    <!-- ********* -->
+
+    <div>
+
+        <% if(habits.length > 0){%>
+
+            <ul>
+                <%for(let habit of habits){%>
+                    <li>
+                        <p><%= habit.habitName %></p>
+                        <p><%= habit.habitDis %></p>
+
+                        <span>Streak: <%= habit.streak %>/7</span>
+                        <span>Completed: <%= habit.completed %>/7</span>
+
+                        <% let color = "white" %>
+                        <% if(habit.days[0] =='Done'){%>
+                            <% color = "green" %>
+                        <% }else if(habit.days[0] =='Not Done'){ %>
+                            <% color = "red" %>
+                        <% } %>
+
+                        <div class="dropdown">
+                            <button class="dropbtn color<%=color%>" type="button"><%= habit.days[0] %></button>
+                            <ul class="dropdown-content">
+                                <li><a href="/habit/update/<%= habit.id %>/<%=0%>/Done">Done</a></li>
+                                <li><a href="/habit/update/<%= habit.id %>/<%=0%>/Not%20Done">Not Done</a></li>
+                                <li><a href="/habit/update/<%= habit.id %>/<%=0%>/None">None</a></li>
+                            </ul>
+                        </div>
+
+
+                        <a href="/habit/delete/<%= habit.id %>"><button>Delete</button></a>
+                    </li>
+                <%}%>
+            </ul>
+
+        <%}else{%>
+            <p>No habit</p>
+        <%}%>
+
+    </div>
+</div>

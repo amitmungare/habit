@@ -22,7 +22,6 @@ module.exports.createHabit = async function(req,res){
                 completed:0,
                 streak:0
             })
-            req.flash('success', 'Habit created');
             user.habits.push(habit.id);
             user.save();
             return res.redirect('back');
@@ -39,7 +38,6 @@ module.exports.habitList = async function(req,res){
             let user =await User.findById(req.user.id).populate('habits')
             let habits = user.habits;
 
-            req.flash('success', 'Welcome')
             return res.render('habitList',{
                 title:'Habits',
                 habits:habits,
@@ -62,7 +60,7 @@ module.exports.habitListWeekly = async function(req, res){
             let days =[];
 
             for(let i=0; i<7; i++){
-                let day = date.getDate()+' '+month[date.getMonth]+' '+date.getFullYear();
+                let day = date.getDate()+' '+month[date.getMonth()]+' '+date.getFullYear();
                 date.setDate(date.getDate()-1);
                 days.push(day);
             }
@@ -73,7 +71,6 @@ module.exports.habitListWeekly = async function(req, res){
 
             updateData(habits);
 
-            req.flash('success', 'status updated')
             return res.render('habitListWeekly', {
                 title:'Weekly Habit',
                 habits:habits,
@@ -167,8 +164,7 @@ module.exports.update = function(req, res){
         habit.days[day] = status;
         habit.save();
         updateStreak(habit);
-        req.flash('success', 'Habit Updated');
-        return res.redirect('/habit/habitlistWeekly');
+        return res.redirect('back');
     })
 }
 
@@ -180,12 +176,10 @@ module.exports.deleteHabit = async function(req, res){
             let uid = habit.user;
             habit.remove();
             await User.findByIdAndUpdate(uid, {$pull:{habits:id}})
-            req.flash('success', 'habit deleted')
             return res.redirect('/habit/habitList')
         }
 
     } catch (error) {
-        req.flash('error', 'Could not Delete Habit')
         return res.redirect('./habit/habitList')
     }
 }

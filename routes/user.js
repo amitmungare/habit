@@ -7,9 +7,10 @@ const controller  = require('../controllers/userController');
 
 router.get('/register', controller.register);
 router.get('/login', controller.login);
-router.get('/logout', controller.logout);
-router.get('/createUser', controller.createUser);
-router.get('/createSession', passport.authenticate('local',{
+router.get('/logout', controller.logoutUser);
+router.get('/about',passport.checkAuthentication, controller.about);
+router.post('/createUser', controller.createUser);
+router.post('/createSession', passport.authenticate('local',{
     failureRedirect:'/user/login',
 }), controller.createSession);
 

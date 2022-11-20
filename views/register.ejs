@@ -1,1 +1,49 @@
-<div>register</div>
+
+<div class="register-div">
+
+    <h2>Register</h2>
+
+    <form action="/user/createUser" method="post">
+        <div class="input-div">
+            <label for="userName">Name</label>
+            <input type="text" id="userName" name="userName" placeholder="userName">
+        </div>
+
+        <div class="input-div">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email">
+        </div>
+
+        <div class="input-div">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="password">
+        </div>
+
+        <div class="input-div">
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" id="cpassword" name="cpassword" placeholder="confirm password">
+        </div>
+
+        <div class="input-div">
+            <label for="dob">DOB</label>
+            <input type="text" id="dob" name="dob" placeholder="dob">
+        </div>
+
+        <div class="input-div">
+            <label for="gender">Gender</label>
+            <input type="text" id="gender" name="gender" placeholder="gender">
+        </div>
+
+        <div class="input-div">
+            <label for="phoneNo">Phone Number</label>
+            <input type="number" id="phoneNo" name="phoneNo" placeholder="phoneNo">
+        </div>
+
+        <div>
+            <button type="submit">Signup</button>
+        </div>
+
+        <p>Have a account <a href="/user/login">Login</a></p>
+    </form>
+
+</div>

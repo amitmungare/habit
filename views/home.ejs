@@ -1,3 +1,13 @@
 <div>
-    amit111
+    <h2>
+        <% if(locals.user){ %>
+            <p> Your Habits</p>
+            <a href="/habit/habitList"><button>Go to Dashboard</button></a>
+        <% }else{ %>
+            <p>Please Login / Signup</p>
+            <a href="/user/login">Login</a>
+            <a href="/user/register">Signup</a>
+
+        <%}%>
+    </h2>
 </div>

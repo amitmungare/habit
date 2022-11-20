@@ -4,9 +4,8 @@ const Habit = require('../models/habit');
 
 module.exports.register = function(req, res){
     if(req.isAuthenticated()){
-        req.flash('success', "Please Login");
-        return res.render('dashboard',{
-            title:'Dashboard'
+        return res.render('habitlist',{
+            title:'habitlist'
         })
     }else{
         return res.render('register',{
@@ -17,9 +16,8 @@ module.exports.register = function(req, res){
 
 module.exports.login = function(req, res){
     if(req.isAuthenticated()){
-        req.flash('success', "Please Login");
-        return res.render('dashboard',{
-            title:'Dashboard'
+        return res.render('habitlist',{
+            title:'habitlist'
         })
     }else{
         return res.render('login',{
@@ -28,21 +26,35 @@ module.exports.login = function(req, res){
     }
 }
 
-module.exports.logout = function(req, res){
-    req.logout();
+module.exports.about = function(req, res){
+    if(req.isAuthenticated()){
+        return res.render('about',{
+            title:'about'
+        })
+    }else{
+        return res.render('login',{
+            title:'Login'
+        })
+    }
+}
 
-    req.flash('success', "Logged out")
+module.exports.logoutUser = function(req, res){
+    // req.logout();
+
+    req.logout(function(err) {
+        if (err) { return }
+        res.redirect('/');
+    });
+
     return res.redirect('/')
 }
 
 module.exports.createSession = function(req, res){
-    req.flash('success','Logged In Successfully')
-    return res.redirect('/habit/dashboard');
+    return res.redirect('/habit/habitlist');
 }
 
 module.exports.createUser = function(req, res){
     if(req.password != req.cpassword){
-        req.flash('message','Incorrect password')
         return;
     }
     User.create(req.body, function(error, user){
@@ -50,7 +62,7 @@ module.exports.createUser = function(req, res){
             console.log("Error in creating user", error);
             return;
         }
-        res.redirect('./user/login');
+        res.redirect('/user/login');
         
     })
 }

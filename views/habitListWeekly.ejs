@@ -1,0 +1,39 @@
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Habit Name</th>
+                <% for(let day of days){%>
+                    <th><%= day %></th>
+                <%}%>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let habit of habits){ %>
+                <tr>
+                    <th><%= habit.habitName %></th>
+                    <% for(let i=0; i < habit.days.length; i++){%>
+                        <td>
+                            <% let color = "white" %>
+                            <% if(habit.days[i] =='Done'){%>
+                                <% color = "green" %>
+                            <% }else if(habit.days[i] =='Not Done'){ %>
+                                <% color = "red" %>
+                            <% } %>
+
+                            <div class="wdropdown">
+                                <button class="wdropbtn wcolor<%=color%>" type="button"><%= habit.days[i] %></button>
+                                <ul class="wdropdown-content">
+                                    <li><a href="/habit/update/<%= habit.id %>/<%=i%>/Done">Done</a></li>
+                                    <li><a href="/habit/update/<%= habit.id %>/<%=i%>/Not%20Done">Not Done</a></li>
+                                    <li><a href="/habit/update/<%= habit.id %>/<%=i%>/None">None</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    <%}%>
+                </tr>
+            <%}%>
+        </tbody>
+    </table>
+</div>

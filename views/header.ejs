@@ -1,3 +1,21 @@
-<div>
-    header
+<div class="header-main-div">
+
+    <a href="/">Habit</a>
+
+    <div class="user">
+        <% if(locals.user){%>
+            <div>
+                <a href="/habit/habitList">Todays Habit</a>
+                <a href="/habit/habitListWeekly">Weekly Habit</a>
+            </div>
+            <div>
+                <a href="/user/about"><%= user.userName%></a>
+                <a href="/user/logout">Logout</a>
+            </div>
+        <%}else{%>
+            <a href="/user/login">Login</a>
+            <a href="/user/register">signup</a>
+        <%}%>
+    </div>
+    
 </div>
