@@ -1,18 +1,18 @@
 
-<div>
+<div class="hlw-main-div">
     <table>
         <thead>
             <tr>
-                <th>Habit Name</th>
+                <td>Habit Name</td>
                 <% for(let day of days){%>
-                    <th><%= day %></th>
+                    <td><%= day %></td>
                 <%}%>
             </tr>
         </thead>
         <tbody>
             <% for(let habit of habits){ %>
                 <tr>
-                    <th><%= habit.habitName %></th>
+                    <td><%= habit.habitName %></td>
                     <% for(let i=0; i < habit.days.length; i++){%>
                         <td>
                             <% let color = "white" %>

@@ -1,0 +1,51 @@
+
+.reg-div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+.reg-main-div{
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+
+.input-div {
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.input-div input{
+    border: none;
+    width: 20rem;
+    border-bottom: 2px solid black ;
+    font-size: 1.2rem;
+    background: aquamarine;
+    padding: 5px;
+}
+
+.input-div label{
+    font-size: 1.2rem;
+}
+
+.reg-btn-div{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.reg-btn-div button{
+    font-size: 1.4rem;
+    background-color: rgb(244, 23, 137);
+    color: white;
+}
+
+.regloglink{
+    color: blue;
+    text-decoration: none;
+}

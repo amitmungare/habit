@@ -1,20 +1,24 @@
 <div class="header-main-div">
 
-    <a href="/">Habit</a>
+    <div class="h-logo-div">
+        <a href="/"> <h2>HabitTracker</h2></a>
+    </div>
 
-    <div class="user">
+    <div class="h-data-div">
         <% if(locals.user){%>
-            <div>
+            <div class="h-left-div">
                 <a href="/habit/habitList">Todays Habit</a>
                 <a href="/habit/habitListWeekly">Weekly Habit</a>
             </div>
-            <div>
+            <div class="h-right-div">
                 <a href="/user/about"><%= user.userName%></a>
                 <a href="/user/logout">Logout</a>
             </div>
         <%}else{%>
-            <a href="/user/login">Login</a>
-            <a href="/user/register">signup</a>
+            <div class="h-right-div-not-login">
+                <a href="/user/login">Login</a>
+                <a href="/user/register">signup</a>
+            </div>
         <%}%>
     </div>
     

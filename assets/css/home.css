@@ -1,0 +1,42 @@
+
+.main-home-div{
+    display: flex;
+    justify-content: center;
+}
+
+.home-div{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(108, 250, 203, 0.381);
+    padding: 4rem;
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+
+.p-tag-home{
+    margin-bottom: 40px;
+}
+
+.home-btn-lg{
+    background-color: aqua;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    color: blue;
+}
+
+
+.home-go-dash-btn{
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    border: none;
+    background-color: aquamarine;
+    color: blue;
+    border-radius: 20px;
+}

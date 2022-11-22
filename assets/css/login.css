@@ -1,0 +1,47 @@
+
+.login-div{
+    display: flex;
+    justify-content: center;
+}
+.login-main-div{
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    padding: 4rem;
+    border-radius: 20px;
+    margin-top: 5rem;
+}
+
+.input-div {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.input-div input{
+    border: none;
+    width: 20rem;
+    border-bottom: 2px solid black ;
+    font-size: 1.4rem;
+    background: aquamarine;
+    padding: 10px;
+}
+
+.input-div label{
+    font-size: 1.6rem;
+}
+
+.login-btn-div{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.login-btn-div button{
+    font-size: 1.4rem;
+    background-color: rgb(244, 23, 137);
+    color: white;
+}
+
+.loginreglink{
+    color: blue;
+    text-decoration: none;
+}
