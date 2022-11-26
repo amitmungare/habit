@@ -1,11 +1,13 @@
+<!-- this is the main home page  -->
 <div class="main-home-div">
     <div class="home-div">
         <h2 class="home-h2">
+            <!-- if user is login the show Dashboard button  -->
             <% if(locals.user){ %>
                 <p> Your Habits</p>
                 <a  href="/habit/habitList"><button class="home-go-dash-btn">Go to Dashboard</button></a>
             <% }else{ %>
-
+                <!-- if user is not logined the direct the user to login or signup  -->
                 <p class="p-tag-home">Please Login or Signup</p>
                 <a class="home-btn-lg" href="/user/login">Login</a>
                 <a class="home-btn-lg" href="/user/register">Signup</a>

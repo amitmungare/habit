@@ -1,8 +1,13 @@
+// import mongoose 
 const mongoose = require('mongoose');
 
+// this is the DataBase schema
 const userSchema = new mongoose.Schema({
+     // data in schema 
     userName:{
+        // type of parameter
         type:String,
+        // cannot be null 
         required:true
     },
     email:{
@@ -34,4 +39,5 @@ const userSchema = new mongoose.Schema({
 })
 
 const User = mongoose.model('User', userSchema);
+// exporting the todo
 module.exports = User;

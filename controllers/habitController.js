@@ -5,6 +5,7 @@ const Habit = require('../models/habit');
 
 const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 
+// function to create a habit 
 module.exports.createHabit = async function(req,res){
     try{
         let user =await User.findById(req.user.id);
@@ -32,6 +33,8 @@ module.exports.createHabit = async function(req,res){
     }
 }
 
+
+// function to get the list of habits
 module.exports.habitList = async function(req,res){
     try{
         if(req.isAuthenticated()){
@@ -52,6 +55,8 @@ module.exports.habitList = async function(req,res){
     }
 }
 
+
+// function to get the list of weekly habits
 module.exports.habitListWeekly = async function(req, res){
     try{
 
@@ -83,6 +88,8 @@ module.exports.habitListWeekly = async function(req, res){
     }
 }
 
+
+// function to update habit 
 let updateData = function(habits){
     let today = new Date().getDate();
 
@@ -114,6 +121,8 @@ let updateData = function(habits){
     }
 }
 
+
+// function to update streak
 let updateStreak = async function(habit){
     try{
 
@@ -151,6 +160,7 @@ let updateStreak = async function(habit){
 }
 
 
+// function to update habit 
 module.exports.update = function(req, res){
     let id = req.params.id;
     let day = req.params.day;
@@ -168,6 +178,8 @@ module.exports.update = function(req, res){
     })
 }
 
+
+// function to delete habit 
 module.exports.deleteHabit = async function(req, res){
     try {
         let id = req.params.id;

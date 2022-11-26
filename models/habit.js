@@ -1,8 +1,12 @@
+// import mongoose 
 const mongoose = require('mongoose');
-
+// this is the DataBase schema
 const habitSchema = new mongoose.Schema({
+     // data in schema 
     habitName:{
+        // type of parameter 
         type:String,
+        // cannot be null 
         required:true
     },
     habitDis:{
@@ -28,4 +32,5 @@ const habitSchema = new mongoose.Schema({
 })
 
 const Habit = mongoose.model('Habit', habitSchema);
+// exporting the todo
 module.exports = Habit;

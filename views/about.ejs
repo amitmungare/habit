@@ -1,10 +1,18 @@
+
+<!-- this is the about page  -->
 <div class="about-user-div">
+        <!-- if the user is logged in  -->
         <% if(locals.user){%>
     
+           <!-- user name  -->
            <p> <%= user.userName %> </p>
+           <!-- user email  -->
            <p> <%= user.email %> </p>
+           <!-- user dob  -->
            <p> <%= user.dob %> </p>
+           <!-- user gender  -->
            <p> <%= user.gender %> </p>
+           <!-- user phoneNo  -->
            <p> <%= user.phoneNo %> </p>
     
         <%}%>

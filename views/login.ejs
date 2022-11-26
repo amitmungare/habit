@@ -1,24 +1,29 @@
+<!-- this is the login page  -->
 <div class="login-div">
 
     <div class="login-main-div">
         <h1>Login</h1>
     
         <div>
+            <!-- form to enter data to login  -->
             <form action="/user/createSession" method="post">
                 <div class="input-div">
+                    <!-- enter email id  -->
                     <label for="email">Email : </label>
                     <input type="email" id="email" name="email" placeholder="email">
                 </div>
         
                 <div class="input-div">
+                    <!-- enter Password -->
                     <label for="password">Password : </label>
                     <input type="password" id="password" name="password" placeholder="password">
                 </div>
     
+                <!-- button to login  -->
                 <div class="login-btn-div">
                     <button type="submit">Login</button>
                 </div>
-    
+                <!-- if the user do not have an account then register  -->
                 <p>Do not have a account <a class="loginreglink" href="/user/register">Register</a></p>
             </form>
 

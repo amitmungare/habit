@@ -1,8 +1,10 @@
 
 <div class="hlw-main-div">
+    <!-- table to show habits weekly  -->
     <table>
         <thead>
             <tr>
+                <!-- header displaying all the days  -->
                 <td>Habit Name</td>
                 <% for(let day of days){%>
                     <td><%= day %></td>
@@ -12,9 +14,11 @@
         <tbody>
             <% for(let habit of habits){ %>
                 <tr>
+                    <!-- display all the habit names  -->
                     <td><%= habit.habitName %></td>
                     <% for(let i=0; i < habit.days.length; i++){%>
                         <td>
+                            <!-- set the color of button  -->
                             <% let color = "white" %>
                             <% if(habit.days[i] =='Done'){%>
                                 <% color = "green" %>

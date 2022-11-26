@@ -1,5 +1,7 @@
+<!-- this is the header page  -->
 <div class="header-main-div">
 
+    <!-- name of the website  -->
     <div class="h-logo-div">
         <a href="/"> <h2>HabitTracker</h2></a>
     </div>
@@ -7,16 +9,22 @@
     <div class="h-data-div">
         <% if(locals.user){%>
             <div class="h-left-div">
+                <!-- go to todays habit page  -->
                 <a href="/habit/habitList">Todays Habit</a>
+                <!-- go to weekly habit page  -->
                 <a href="/habit/habitListWeekly">Weekly Habit</a>
             </div>
             <div class="h-right-div">
+                <!-- go to about us page  -->
                 <a href="/user/about"><%= user.userName%></a>
+                <!-- logout user  -->
                 <a href="/user/logout">Logout</a>
             </div>
         <%}else{%>
             <div class="h-right-div-not-login">
+                <!-- go to login page -->
                 <a href="/user/login">Login</a>
+                 <!-- go to register page -->
                 <a href="/user/register">signup</a>
             </div>
         <%}%>
