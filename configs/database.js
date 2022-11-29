@@ -1,8 +1,8 @@
 // require the mongoose library
 const mongoose = require('mongoose');
 // connect to the database
-mongoose.connect('mongodb://localhost:27017/habit');
-// mongoose.connect('mongodb+srv://amitmungare:amitmungare@habit.0tzz6vg.mongodb.net/?retryWrites=true&w=majority');
+// mongoose.connect('mongodb://localhost:27017/habit');
+mongoose.connect('mongodb+srv://amitmungare:amitmungare@habit.0tzz6vg.mongodb.net/?retryWrites=true&w=majority');
 // aquire the connection
 let database = mongoose.connection;
 // error

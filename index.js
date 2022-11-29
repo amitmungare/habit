@@ -43,8 +43,8 @@ app.use(session({
         maxAge:(1000 * 60 * 1000)
     },
     store:MongoStore.create({
-        // mongoUrl:'mongodb+srv://amitmungare:amitmungare@habit.0tzz6vg.mongodb.net/?retryWrites=true&w=majority',
-        mongoUrl:'mongodb://localhost:27017/habit',
+        mongoUrl:'mongodb+srv://amitmungare:amitmungare@habit.0tzz6vg.mongodb.net/?retryWrites=true&w=majority',
+        // mongoUrl:'mongodb://localhost:27017/habit',
         autoRemove:'disabled'
     }, function(error){
         console.log(error || 'connected to mongodb');
