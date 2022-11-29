@@ -1,7 +1,7 @@
 // require express for setting up the express server
 const express = require('express');
 // set up the port number
-const port = 8000 || process.env.PORT;
+const port = process.env.PORT || 3000;
 // using express
 const app = express();
 
