@@ -35,6 +35,8 @@
 .hl-form button{
   width: 6rem;
   border-radius: 20px;
+  background-color:blueviolet;
+  color: white;
   border: none;
   padding: 10px;
   font-size: 1rem;
