@@ -43,4 +43,4 @@
 ![Screenshot (283)](https://github.com/amitmungare/habit/blob/main/ht2.png)
 
 ## Weekly Page 
-![Screenshot (283)](https://github.com/amitmungare/habit#:~:text=11%20minutes%20ago-,ht3.png,-adding%20images%20in)
+![Screenshot (283)](https://github.com/amitmungare/habit/blob/main/ht3.png)
