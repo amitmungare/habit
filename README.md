@@ -25,4 +25,4 @@
 #### The Server should now be running at http://localhost:3000/
 
 ## Folder Structure
-(https://github.com/amitmungare/habit/blob/main/ht1.png)
+![Screenshot (283)](https://github.com/amitmungare/habit/blob/main/ht1.png)
